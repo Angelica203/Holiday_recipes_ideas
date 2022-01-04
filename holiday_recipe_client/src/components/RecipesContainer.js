@@ -1,25 +1,35 @@
-
-//this will contain all the data and methods and mounting
-
-
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addRecipe, fetchRecipes } from '../actions/recipeActions'
+import { fetchRecipes } from '../actions/recipeActions'
 import RecipeList from './RecipeList'
 import RecipesForm from './RecipesForm'
 
- class RecipesContainer extends Component {
-     componentDidMount(){
-         this.props.fetchRecipes()
-     }
+class RecipesContainer extends Component {
+    componentDidMount(){
+        this.props.dispatchFetchRecipes()
+    }
+
     render() {
         return (
             <div>
-                Add Your Recipe
-                <RecipesForm />
-                <RecipeList />
+            <RecipesForm />
+            <ul>
+            {this.props.recipes.map(recipe => <RecipeList key={recipe.id}{...recipe} />)}
+            </ul>
             </div>
-        );
+        )
     }
 }
-export default connect(null, { fetchRecipes })(RecipesContainer);
+function mapDispatchToProps(dispatch){
+    return {
+        dispatchFetchRecipes: () => dispatch(fetchRecipes())
+    }
+}
+
+ function mapStateToProps(state){
+    return{
+        recipes: state.recipes
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecipesContainer)

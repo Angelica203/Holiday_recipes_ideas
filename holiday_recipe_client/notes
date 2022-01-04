@@ -1,1 +1,30 @@
-i want the user to select a recipe and also to add one 
+// i want the user to select a recipe and also to add one 
+
+            {/* {recipes.map(recipe => <ul><li key={recipe.id}>{recipe.name} - {recipe.ingredients} -
+                    {recipe.cook_time} -
+                    {recipe.Image}
+                </li></ul>)
+                } */}
+
+
+//RecipeContainer
+// import React, { Component } from 'react'
+// import { connect } from 'react-redux'
+// import { addRecipe, fetchRecipes } from '../actions/recipeActions'
+// import RecipesForm from './RecipesForm'
+
+
+// class RecipesContainer extends Component {
+//      componentDidMount(){
+//          this.props.fetchRecipes()
+//      }
+//     // render() {
+//     //     return (
+//     //         <div>
+//     //             Add YOur Recipe
+//     //             <RecipesForm />
+//     //         </div>
+//     //     )
+//     // }
+// }
+// export default connect(null, {fetchRecipes})(RecipesContainer)

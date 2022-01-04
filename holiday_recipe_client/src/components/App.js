@@ -1,14 +1,14 @@
 
 import React from 'react'
-// import RecipesContainer from './RecipesContainer'
-// import { fetchRecipes } from '../actions/recipeActions'
-// import RecipeListContainer from './RecipeListContainer'
+import RecipesContainer from './RecipesContainer'
+import { fetchRecipes } from '../actions/recipeActions'
 import Router from './Router'
-import RecipesContainer from './RecipesContainer';
+import Home from './Home'
 
 const App = () => {
         return (
             <div>
+                <Home />
                 <RecipesContainer />
                 <Router />
             </div>

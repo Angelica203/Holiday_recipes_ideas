@@ -20,6 +20,14 @@ export const addRecipe = (recipe) => {
     .then(recipe => dispatch({ type: 'ADD_RECIPE', payload: recipe})) 
 
 }
+
 }
 
-//make sure i have a GET & POST reaquest
+export const deleteRecipe = (id) => {
+    return (dispatch) => {
+        fetch(`http://localhost:3000/recipes/${id}`,{
+            method: 'DELETE',
+    })
+    .then(data => dispatch({type: 'DELETE_RECIPE', payload: id}))
+  }
+}

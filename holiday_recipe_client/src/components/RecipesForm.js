@@ -7,8 +7,8 @@ class RecipesForm extends Component {
     state = {
        name: '',
        ingredients: '',
-       cook_time: '',
-       img: ''
+       cook_time: 0,
+       image: ''
     }
 
 handleChange = e => {
@@ -20,6 +20,12 @@ handleChange = e => {
     handleSubmit = e => {
     e.preventDefault()
     this.props.dispatchAddRecipe(this.state)
+    this.setState({
+        name: '',
+        ingredients: '',
+        cook_time: 0,
+        image: ''
+    })
 }
   
 
@@ -35,10 +41,10 @@ handleChange = e => {
                 <input type='text' value={this.state.ingredients} onChange={this.handleChange} name="ingredients"/>
                 < br/>
                 <label>cook_time:</label>
-                <input type='timer' value={this.state.cook_time} onChange={this.handleChange} name="cook_time"/>
+                <input type='number' value={this.state.cook_time} onChange={this.handleChange} name="cook_time"/>
                 < br/>
                 <label>Image(optional):</label>
-                <input type='img_url' value={this.state.img} onChange={this.handleChange} name="img"/>
+                <input type='text' value={this.state.image} onChange={this.handleChange} name="image"/>
                 < br/>
                 <input type='submit' value="Share Recipe"/>
             </form>

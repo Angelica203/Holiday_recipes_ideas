@@ -4,10 +4,14 @@ import { fetchRecipes } from '../actions/recipeActions'
 import RecipeList from './RecipeList'
 import RecipesForm from './RecipesForm'
 
+//fetch the data
+
 class RecipesContainer extends Component {
+    //this function give us access to maptodispatch
     componentDidMount(){
         this.props.dispatchFetchRecipes()
     }
+
 
     render() {
         return (
@@ -20,6 +24,9 @@ class RecipesContainer extends Component {
         )
     }
 }
+
+//thunk
+//callback function
 function mapDispatchToProps(dispatch){
     return {
         dispatchFetchRecipes: () => dispatch(fetchRecipes())

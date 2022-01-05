@@ -27,3 +27,5 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root')
   )
+
+  //provider is the parent of router and router the parent of app

@@ -1,24 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchRecipes } from '../actions/recipeActions'
-import RecipeList from './RecipeList'
-import RecipesForm from './RecipesForm'
-
-//fetch the data
+import RecipesIdeaForm from './RecipesIdeaForm'
+import RecipeIdeaList from './RecipeIdeaList'
 
 class RecipesContainer extends Component {
-    //this function give us access to maptodispatch
     componentDidMount(){
         this.props.dispatchFetchRecipes()
     }
 
-
     render() {
         return (
             <div>
-            <RecipesForm />
+            <RecipesIdeaForm />
             <ul>
-            {this.props.recipes.map(recipe => <RecipeList key={recipe.id}{...recipe} />)}
+            {this.props.recipes.map(recipe => <RecipeIdeaList key={recipe.id}{...recipe} />)}
             </ul>
             </div>
         )
@@ -26,7 +22,6 @@ class RecipesContainer extends Component {
 }
 
 //thunk
-//callback function
 function mapDispatchToProps(dispatch){
     return {
         dispatchFetchRecipes: () => dispatch(fetchRecipes())

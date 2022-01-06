@@ -1,5 +1,5 @@
 
-export const RecipesReducer = (state = {recipes: []}, action) => {
+export const RecipesReducer = (state = {recipes: [], activies: []}, action) => {
     switch(action.type){
         case 'FETCH_RECIPES':
             return {
@@ -16,6 +16,11 @@ export const RecipesReducer = (state = {recipes: []}, action) => {
                 return{
                     ...state,
                     recipes: newRecipeArray
+                }
+            case 'FETCH_ACTIVITIES':
+                return{
+                    ...state,
+                    activies: action.payload
                 }
             default:
                 return state

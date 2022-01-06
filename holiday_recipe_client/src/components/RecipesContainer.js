@@ -25,6 +25,7 @@ class RecipesContainer extends Component {
 function mapDispatchToProps(dispatch){
     return {
         dispatchFetchRecipes: () => dispatch(fetchRecipes())
+        //action has  access
     }
 }
 

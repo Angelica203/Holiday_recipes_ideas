@@ -7,10 +7,14 @@ function RecipeIdeaList(props){
     function handleDelete(){
         props.dispatchDeleteRecipe(props.id)
     }
+    function handleSave(){
+        
+    }
     return(
         <div>
-    <li>{props.holiday_type} - {props.name} - {props.ingredients} - {props.cook_time} - {props.image}</li>
-        <button onClick={handleDelete}>Delete</button>
+    <li>{props.holiday_type} - {props.name}</li>
+        <button onClick={handleDelete}>Delete</button><br/>
+        <button onClick={handleSave}>Save</button>
         </div>
     )
 }

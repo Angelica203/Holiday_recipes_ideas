@@ -10,9 +10,9 @@ import { Link } from 'react-router-dom'
         <Link to='/recipes'>
             <button id="recipes">Recipe Ideas</button>
         </Link>
-        <Link to='/saved_recipes'>
+        {/* <Link to='/saved_recipes'>
             <button id="saved_recipes">Your Saved Recipes</button>
-        </Link>
+        </Link> */}
 
             
         </div>

@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchRecipes } from '../actions/recipeActions'
-import RecipesIdeaForm from './RecipesIdeaForm'
 import RecipeIdeaList from './RecipeIdeaList'
-
+import RecipesIdeaForm from './RecipesIdeaForm'
 class RecipesContainer extends Component {
     componentDidMount(){
         this.props.dispatchFetchRecipes()
@@ -25,7 +24,6 @@ class RecipesContainer extends Component {
 function mapDispatchToProps(dispatch){
     return {
         dispatchFetchRecipes: () => dispatch(fetchRecipes())
-        //action has  access
     }
 }
 

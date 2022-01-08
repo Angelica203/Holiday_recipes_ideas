@@ -5,7 +5,7 @@ export const fetchRecipes = () => {
     return(dispatch) => {
         fetch('http://localhost:3000/recipes')
         .then(resp => resp.json()) 
-        .then(recipes => dispatch({type: 'FETCH_RECIPES', payload: recipes})
+        .then(recipes => dispatch({type: 'FETCH_RECIPES', payload: recipes}) //data
         //making fetch request, getting data then passing it to dispatch
         ) 
 

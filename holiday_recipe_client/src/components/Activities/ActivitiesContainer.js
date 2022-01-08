@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import ActivitiesList from './ActivitiesList'
+import ActivitiesForm from './ActivitiesForm'
 import { fetchActivities } from '../../actions/activitiesActions'
 
 
  class ActivitiesContainer extends Component {
-
     componentDidMount(){
         this.props.dispatchFetchActivities()
     }
@@ -12,7 +13,11 @@ import { fetchActivities } from '../../actions/activitiesActions'
     render() {
         return (
             <div>
-                
+            <ActivitiesForm />
+            <ul>
+            {this.props.activities.map(activity => <ActivitiesList key={activity.id}{...activity} />)}
+            </ul>
+ 
             </div>
         )
     }
@@ -29,4 +34,4 @@ function mapStateToProps(stateFromStore){
     }
 }
 //
-export default connect(null, mapDispatchToProps)(ActivitiesContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(ActivitiesContainer)

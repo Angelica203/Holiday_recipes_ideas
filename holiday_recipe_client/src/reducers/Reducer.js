@@ -1,5 +1,5 @@
 
-export const RecipesReducer = (state = {recipes: [], activies: []}, action) => {
+export const Reducer = (state = {recipes: [], activities: []}, action) => {
     switch(action.type){
         case 'FETCH_RECIPES':
             return {
@@ -22,6 +22,18 @@ export const RecipesReducer = (state = {recipes: [], activies: []}, action) => {
                     ...state,
                     activies: action.payload
                 }
+                case 'ADD_ACTIVITY':
+                    return {
+                        ...state,
+                        activities: [...state.activities, action.payload]
+                    }
+             case 'DELETE_ACTIVITY':
+                    const newActivityArray = state.activities.filter(a => a.id !== action.payload)
+                    return{
+                        ...state,
+                        activities: newActivityArray
+                 }       
+        
             default:
                 return state
     }

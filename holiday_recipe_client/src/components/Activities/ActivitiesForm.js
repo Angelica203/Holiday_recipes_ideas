@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { addActivity } from '../../actions/activitiesActions';
 
-import { addRecipe } from '../actions/recipeActions'
 
-class RecipesIdeaForm extends Component {
+class ActivitiesForm extends Component {
     state = {
-        holiday_type: '',
-        name: ''
+       name: '',
+       description:''
+       
     }
+
 
 handleChange = e => {
     const { name, value } = e.target
@@ -17,12 +19,12 @@ handleChange = e => {
 }
     handleSubmit = e => {
     e.preventDefault()
-    this.props.dispatchAddRecipe(this.state)
+    this.props.dispatchAddActivity(this.state)
     this.setState({
-        holiday_type: '',
         name: '',
+        description: ''
     })
-    //dispatch addrecipe, clear my state
+    //dispatch addActivity, clear my state
 }
   
 //controlled component
@@ -31,14 +33,14 @@ handleChange = e => {
             
             <form className="form" onSubmit={ this.handleSubmit}>
 
-                <label>Holiday Type:</label>
-                <input type='text' value={this.state.holiday_type} onChange={this.handleChange} name="holiday_type"/>
-                
-                <br/>
-                <br/>
                 <label>Name:</label>
                 <input type='text' value={this.state.name} onChange={this.handleChange} name="name"/>
-                <br/>                
+                <br/>
+                <br/>
+                 <label>Description:</label>
+                <input type='text' value={this.state.description} onChange={this.handleChange} name="description"/>
+                
+                <br/>
                 <br/>
                 <input type='submit' value="Share Recipe"/>
             </form>
@@ -47,9 +49,9 @@ handleChange = e => {
 }
 function mapDispatchToProps(dispatch){
     return {
-        dispatchAddRecipe: (recipe) => dispatch(addRecipe(recipe))
+        dispatchAddActivity: (activity) => dispatch(addActivity(activity))
     }
 }
 
-export default connect(null, mapDispatchToProps)(RecipesIdeaForm);
+export default connect(null, mapDispatchToProps)(ActivitiesForm);
  

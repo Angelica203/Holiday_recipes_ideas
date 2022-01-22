@@ -1,18 +1,21 @@
 
-//Thunk allows us to return a function inside of our action 
+//Thunk allows us to return a function inside of our 
 // our action creator returns a plain JavaScript object,
-//receives the store's dispatch function as its argument,we can dispatch multiple actions from inside that returned function.
+//receives the store's dispatch function as its argument,
+//we can dispatch multiple actions from inside that returned function.
+//thunk give me access to my dispatch because of the action creator
+
 
 
 export const fetchActivities = () =>{
-    return(dispatch) => {
+    return(dispatch) => {        
         fetch('http://localhost:3000/activities')
         .then(resp => resp.json())
-        .then(activities => dispatch({type: 'FETCH_ACTIVITES', payload: activities})
-        )
+        .then(activities => dispatch({type: 'FETCH_ACTIVITES', payload: activities}))
     }
     
 }
+
 export const addActivity = (activity) => {
     return(dispatch) => {
     fetch('http://localhost:3000/activities',{

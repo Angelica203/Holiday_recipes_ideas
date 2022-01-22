@@ -1,0 +1,14 @@
+
+REDUX DATA FLOW 
+1.)an action is dispatch when user interacts with the application
+2.)the root reducer is called with the current state and the dispatch action, 
+then it may divide task  to smaller reducer  and return the new state
+3.)the store notifies the view by excuting the callback
+4.)The view then retrieves the updated state and re render it again
+
+Thunk allows us to return a function inside of our 
+// our action creator returns a plain JavaScript object,
+//receives the store's dispatch function as its argument,
+//we can dispatch multiple actions from inside that returned function.
+//thunk give me access to my dispatch because of the action creator
+

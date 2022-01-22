@@ -1,13 +1,20 @@
 //fetch recipe form api
 //thunk allow redux to do more of the logic
+//Thunk allows us to return a function inside of our 
+// our action creator returns a plain JavaScript object,
+//receives the store's dispatch function as its argument,
+//we can dispatch multiple actions from inside that returned function.
+
+
 export const fetchRecipes = () => {
     //give me access to dispatch because of thunk middleware creaters
     return(dispatch) => {
         fetch('http://localhost:3000/recipes')
         .then(resp => resp.json()) 
-        .then(recipes => dispatch({type: 'FETCH_RECIPES', payload: recipes}) //data
+        .then(recipes => {
+            dispatch({type: 'FETCH_RECIPES', payload: recipes}) //data
         //making fetch request, getting data then passing it to dispatch
-        ) 
+        }) 
 
     }
 }

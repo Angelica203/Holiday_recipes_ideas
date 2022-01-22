@@ -1,30 +1,38 @@
-// i want the user to select a recipe and also to add one 
+//Props are used to pass data from one component to another.
+//props is immutible and cannot be modified
+//props can be used with state and functional component
+//props is used through a callback function
 
-            {/* {recipes.map(recipe => <ul><li key={recipe.id}>{recipe.name} - {recipe.ingredients} -
-                    {recipe.cook_time} -
-                    {recipe.Image}
-                </li></ul>)
-                } */}
-
-
-//RecipeContainer
-// import React, { Component } from 'react'
-// import { connect } from 'react-redux'
-// import { addRecipe, fetchRecipes } from '../actions/recipeActions'
-// import RecipesForm from './RecipesForm'
+//jsx is to declarative written code, to write what you would like for it to do
+//in my project i am using controlled components
 
 
-// class RecipesContainer extends Component {
-//      componentDidMount(){
-//          this.props.fetchRecipes()
-//      }
-//     // render() {
-//     //     return (
-//     //         <div>
-//     //             Add YOur Recipe
-//     //             <RecipesForm />
-//     //         </div>
-//     //     )
-//     // }
-// }
-// export default connect(null, {fetchRecipes})(RecipesContainer)
+// State is passed through out the component/ throu local component
+//state is muttable and can be modified
+//state can only be used state and class components
+
+//Function component : A functional component returns JSX, 
+//instead of using a render method. 
+//they still can recieve props but they have to be 
+//:explicitly written as an argument for the function
+// function component is also a presentational compnent/
+//as the dont need contain custom methods, 
+//relying mainly on props.
+
+
+//class Component are meant for writting a complex application
+//class is a stateful component it extends component class of react libraruy
+//its control how the state is changed
+//has access to different lifecycle methods
+
+
+
+
+
+
+
+//HOOKS:
+// Hooks let you split one component into smaller functions 
+//based on what pieces are related 
+//(such as setting up a subscription or fetching data), 
+//rather than forcing a split based on lifecycle methods.

@@ -7,10 +7,13 @@ import './App.css'
 
 const App = () => {
         return (
+            // <header>
             <div>
+            {/* <img src="assets/logo.png" alt="logo" class="logo"/> */}
                 <NavBar />
                 <Router />
             </div>
+            // </header>
         );
 };
 

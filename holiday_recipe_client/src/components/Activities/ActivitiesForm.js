@@ -42,7 +42,7 @@ handleChange = e => {
                 
                 <br/>
                 <br/>
-                <input type='submit' value="Share Recipe"/>
+                <input type='submit' value="Share Activity"/>
             </form>
         )
     }

@@ -8,6 +8,7 @@ import ActivitiesContainer from './Activities/ActivitiesContainer'
 
 const Router = () => {
         return (
+                //switch will choose the first route that matches
 <Switch>
             <Route exact path= '/' component={Home}/>   
             <Route  path='/recipes' component={RecipesContainer}/>

@@ -1,9 +1,10 @@
-
+//this is my reducer that is from my store
 export const Reducer = (state = {recipes: [], activities: []}, action) => {
     switch(action.type){
         case 'FETCH_RECIPES':
+            console.log('f')
             return {
-                ...state,
+                ...state,    //so we dont loose our original state
             recipes: action.payload
             }
         case 'ADD_RECIPE':
@@ -40,6 +41,8 @@ export const Reducer = (state = {recipes: [], activities: []}, action) => {
 
 
 }
-
+//reducers take in data and reduce it to a single object: the state - 
+//Reducers are functions with a switch statement that returns a new state 
+//based on the action type sent - not mutate state directly but return a new state 
 //return an object
 //NEED SOME REFACTIORING AFTER REACT I BUILT

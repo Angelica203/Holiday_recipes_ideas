@@ -3,27 +3,49 @@
     margin: auto;
     width: 60%;
     border-radius: 12px;
-    background-color: #5ab6d8;
+    background-color:rgba(238, 220, 220, 0.694);
     border: 5px white;
     padding: 10px;
 }
+
+.box {
+    background-image: url(https://clairification.com/wp-content/uploads/2017/10/holiday-word-collage-copy_zps22afad7f.png) ;
+    background-repeat: no-repeat;
+    background-position: 20px 10%;
+  }
+.box {
+    background-color: aliceblue;
+    padding: 100px;
+    margin: 100px;
+}
 body {
-background-color: rgb(189, 62, 62);
+background-image: url(https://clairification.com/wp-content/uploads/2017/10/holiday-word-collage-copy_zps22afad7f.png) ;
+background-color: rgba(201, 35, 35, 0.954);
+}
+header{
+    background: rgb(226, 163, 27);
+
 }
 
 #navbar {
     background-color: rgb(112, 107, 107);
+
+}
+#navbar li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 25px;
 }
 
 li {
-    color: darkgreen;
+    color: rgb(211, 211, 35);
 }
 
 button {
     padding: 12px 24px;
     border-radius: 50px;
-    border: none;
-    color: burlywood;
+    border-style: groove;
+    color: rgb(232, 145, 14);
     cursor: pointer;
 }
 

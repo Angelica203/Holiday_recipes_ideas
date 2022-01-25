@@ -7,9 +7,13 @@
     border: 5px white;
     padding: 10px;
 }
+h1 {
+    color:aliceblue;
+}
 
 .box {
     background-image: url(https://clairification.com/wp-content/uploads/2017/10/holiday-word-collage-copy_zps22afad7f.png) ;
+    background-size: 100px;
     background-repeat: no-repeat;
     background-position: 20px 10%;
   }

@@ -42,7 +42,8 @@ header{
 }
 
 li {
-    color: rgb(211, 211, 35);
+    color: white;
+   font-size-adjust: 26px;
 }
 
 button {

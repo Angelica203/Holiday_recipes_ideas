@@ -1,8 +1,7 @@
 //this is my reducer that is from my store
-export const Reducer = (state = {recipes: [], activities: []}, action) => {
+export const Reducer = (state = {recipes: [], activities: [], loading: false}, action) => {
     switch(action.type){
         case 'FETCH_RECIPES':
-            console.log('f')
             return {
                 ...state,    //so we dont loose our original state
             recipes: action.payload
@@ -21,7 +20,7 @@ export const Reducer = (state = {recipes: [], activities: []}, action) => {
             case 'FETCH_ACTIVITIES':
                 return{
                     ...state,
-                    activies: action.payload
+                    activities: action.payload
                 }
                 case 'ADD_ACTIVITY':
                     return {

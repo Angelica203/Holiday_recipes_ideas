@@ -8,8 +8,8 @@ function RecipeIdeaList(props){
     }
     return(
         <div>
-        <li>{props.holiday_type} - {props.name}</li>
-        <button onClick={handleDelete}>Delete</button><br/>
+            <li>{props.holiday_type} - {props.name}</li>
+            <button onClick={handleDelete}>Delete</button><br/>
         </div>
     )
 }

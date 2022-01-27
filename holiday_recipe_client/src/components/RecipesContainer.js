@@ -6,10 +6,9 @@ import RecipesIdeaForm from './RecipesIdeaForm'
 class RecipesContainer extends Component {
     state = {filterRecipes: []}
     componentDidMount(){
-        console.log('a')
         this.props.dispatchFetchRecipes()
-        console.log('b')
     }
+    
     handleSearch = e => {
         const search = e.target.value.toLowerCase()
         const filter = this.props.recipes.filter(recipe => recipe.name.toLowerCase().includes(search))

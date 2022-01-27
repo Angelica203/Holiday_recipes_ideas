@@ -11,9 +11,10 @@ function ActivitiesList(props) {
 
     return(
         <div>
-            <li>{props.name}-{props.description}</li>
+            <li>{props.name} - {props.description}</li>
                 <button onClick={handleDelete}>Delete</button><br/>
         </div>
+
     )
 }
 function mapDispatchToProps(dispatch){

@@ -16,13 +16,18 @@ import { fetchActivities } from '../../actions/activitiesActions'
         return (
             <div>
                 <h1>Holiday Activities</h1>
-            <ActivitiesForm />
-            <ul>
-            {this.props.activities.map(activity => <ActivitiesList key={activity.id}{...activity} />)}
-            </ul>
- 
+                    <ActivitiesForm />
+                    <div>
+                    {this.props.activities.map(activity => <ActivitiesList key={activity.id} {...activity} />)}
+                </div>
             </div>
         )
+    }
+}
+
+function mapStateToProps(state){
+    return{
+        activities: state.activities
     }
 }
 
@@ -34,10 +39,5 @@ function mapDispatchToProps(dispatch){
     }
 }
 //maping all my activities to my state
-function mapStateToProps(stateFromStore){
-    return{
-        activities: stateFromStore.activities
-    }
-}
 //
 export default connect(mapStateToProps, mapDispatchToProps)(ActivitiesContainer)

@@ -14,16 +14,22 @@ class RecipesContainer extends Component {
         const filter = this.props.recipes.filter(recipe => recipe.name.toLowerCase().includes(search))
         this.setState({filterRecipes: filter})
     }
+    // handleChange = e =>{
+    //     const searchOptions = this.props.recipes
+    // }
     
 
     render() {
         const conditionalRecipes = this.state.filterRecipes.length < 1 ? this.props.recipes : this.state.filterRecipes
         return (
             <div>
-            <RecipesIdeaForm />
-            <input type='text' onChange={this.handleSearch} name=" "/>
-
-            <ul>
+            <h1>Holiday Recipe Ideas</h1>
+            <RecipesIdeaForm /><br/>
+                <h3>Search for Recipe</h3>
+                    <div class="box1">
+                    <input type='text' onChange={this.handleSearch} name=" "/>
+                    </div><br/>
+                <ul>
             {conditionalRecipes.map(recipe => <RecipeIdeaList key={recipe.id}{...recipe} />)}
             </ul>
             </div>

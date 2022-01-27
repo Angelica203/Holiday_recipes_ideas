@@ -16,7 +16,7 @@ import { fetchActivities } from '../../actions/activitiesActions'
         return (
             <div>
                 <h1>Holiday Activities</h1>
-                    <ActivitiesForm />
+                    <ActivitiesForm /><br/>
                     <div>
                     {this.props.activities.map(activity => <ActivitiesList key={activity.id} {...activity} />)}
                 </div>

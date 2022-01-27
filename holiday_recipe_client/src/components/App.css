@@ -3,27 +3,36 @@
     margin: auto;
     width: 60%;
     border-radius: 12px;
-    background-color:rgba(238, 220, 220, 0.694);
+    background-color:rgba(218, 162, 162, 0.694);
     border: 5px white;
     padding: 10px;
 }
 h1 {
-    color:aliceblue;
+    color: black;
+    font-style:italic;
+    text-align: center;    
+}
+h3 {
+    color: black;
+    font-style:italic;
+    text-align: center;    
 }
 
+
 .box {
-    background-image: url(https://clairification.com/wp-content/uploads/2017/10/holiday-word-collage-copy_zps22afad7f.png) ;
     background-size: 100px;
+
     background-repeat: no-repeat;
     background-position: 20px 10%;
   }
 .box {
-    background-color: aliceblue;
+    background-color: rgb(72, 173, 210);
     padding: 100px;
     margin: 100px;
 }
 body {
-background-image: url(https://clairification.com/wp-content/uploads/2017/10/holiday-word-collage-copy_zps22afad7f.png) ;
+background-image: url(https://previews.123rf.com/images/macrovector/macrovector1904/macrovector190400457/123522969-set-of-cartoon-icons-family-active-holidays-parents-with-kids-in-various-activity-isolated-vector-il.jpg) ;
+/* background: size 10px;; */
 background-color: rgba(201, 35, 35, 0.954);
 }
 header{
@@ -32,7 +41,7 @@ header{
 }
 
 #navbar {
-    background-color: rgb(112, 107, 107);
+    background-color: rgb(191, 84, 170);
 
 }
 #navbar li {
@@ -42,11 +51,17 @@ header{
 }
 
 li {
-    color: white;
-   font-size-adjust: 26px;
+    color: black;
+   font-size-adjust: 40spx;
+   margin: auto;
+   width: 60%;
+   border-radius: 20px;
+   background-color:rgba(218, 162, 162, 0.694);
+
 }
 
 button {
+
     padding: 12px 24px;
     border-radius: 50px;
     border-style: groove;
@@ -58,4 +73,9 @@ button:focus,
 button:hover {
     background-color: blue;
     color:blueviolet
+}
+
+.box1{
+    width: 100%;
+    text-align:center;
 }
